@@ -1,0 +1,200 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #87CEEB, #B0E0E6); /* Lively sky gradient */
+  color: #fff;
+  overflow: hidden;
+}
+
+.calculator-container {
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.calculator-container:hover {
+  box-shadow: 0 0 30px #1e90ff, 0 0 50px #1e90ff;
+}
+
+.circle-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.circle-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #1e90ff; /* Blue border */
+  box-shadow: 0 0 10px #1e90ff; /* Blue glow */
+  transition: all 0.3s ease-in-out;
+}
+
+.circle-image:hover {
+  box-shadow: 0 0 15px #1e90ff, 0 0 25px #1e90ff;
+}
+
+.headline {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.headline:hover {
+  color: #1e90ff;
+  text-shadow: 0 0 15px #1e90ff, 0 0 25px #1e90ff;
+}
+
+.container {
+  width: 100%;
+}
+
+.display {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #000e1a;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #eee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+  background-color: #1e90ff;
+  color: #fff;
+  box-shadow: 0 0 15px #1e90ff, 0 0 25px #1e90ff;
+}
+
+.buttons button:active {
+  transform: scale(0.98);
+}
+
+.buttons button span.number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e90ff;
+}
+
+.buttons button span.text {
+  font-size: 10px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .calculator-container {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  .circle-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .headline {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .display {
+    font-size: 18px;
+    height: 45px;
+  }
+
+  .buttons button {
+    font-size: 16px;
+    height: 45px;
+  }
+
+  .buttons button span.number {
+    font-size: 20px;
+  }
+
+  .buttons button span.text {
+    font-size: 8px;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .calculator-container {
+    max-width: 320px;
+  }
+
+  .circle-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .headline {
+    font-size: 22px;
+  }
+
+  .display {
+    font-size: 20px;
+  }
+
+  .buttons button {
+    font-size: 17px;
+    height: 50px;
+  }
+
+  .buttons button span.number {
+    font-size: 21px;
+  }
+
+  .buttons button span.text {
+    font-size: 9px;
+  }
+}
